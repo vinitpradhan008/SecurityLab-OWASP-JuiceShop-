@@ -1,1 +1,107 @@
 
+WEB APPLICATION PENETRATION TESTING & VULNERABILITY ASSESSMENT REPORT
+
+Project: OWASP Juice Shop Security Assessment
+Assessment Type: Web Application VAPT
+Environment: Local Docker Lab on Windows
+Target: OWASP Juice Shop — localhost
+Prepared by: [Your Name]
+Assessment Date: [Insert actual testing date]
+Report Version: 1.0
+Classification: Academic / Training Use
+
+1. Executive Summary
+This report documents a security assessment of the OWASP Juice Shop application running in a local Docker-based testing environment on Windows.
+
+The assessment focused on two vulnerability classes: SQL Injection and Cross-Site Scripting (XSS). The objective was to understand the vulnerabilities, document reproducible evidence, evaluate potential security impact, and provide actionable remediation recommendations.
+
+The findings documented in this report are limited to the local training environment. Results should not be interpreted as evidence of exposure in a production application.
+
+Assessment status: Findings require supporting evidence and final validation before this report is considered complete.
+
+2. Assessment Objectives
+
+    Identify and document SQL Injection and XSS behaviour in the authorized training application.
+    Record reproducible testing steps and supporting evidence.
+    Assess potential confidentiality, integrity, and availability impacts.
+    Map verified findings to applicable OWASP categories.
+    Calculate CVSS 3.1 scores using evidence-based attack scenarios.
+    Recommend developer fixes and operational controls.
+    Establish remediation and retesting priorities.
+
+3. Scope and Rules of Engagement
+
+In scope
+
+    The locally hosted OWASP Juice Shop application.
+    Application inputs and functionality associated with the two documented findings.
+    Browser-based testing and relevant local security-tool results.
+
+Out of scope
+
+    External websites and third-party systems.
+    Production environments not explicitly authorized for testing.
+    Denial-of-service testing and destructive exploitation.
+
+Environment
+
+    Operating system: Windows
+    Deployment: Docker
+    Access method: Web browser
+    Target URL: [Insert actual localhost URL]
+    Testing tools: [List only tools actually used]
+
+4. Methodology
+
+The assessment follows a structured process:
+
+    Confirm the target and authorized scope.
+    Access the application and identify relevant functionality.
+    Execute controlled tests in the local lab.
+    Record actual results and sanitized evidence.
+    Verify whether the observed behaviour supports the suspected vulnerability.
+    Assess impact and calculate CVSS 3.1.
+    Map findings to applicable OWASP categories.
+    Recommend fixes and define retesting criteria.
+
+5. Finding Summary
+ID	             Finding	Status
+VAPT-001	      SQL Injection	Evidence and impact validation pending
+VAPT-002	      Cross-Site Scripting (XSS)	Evidence and context validation pending
+
+Severity and CVSS scores must be finalized after reviewing the actual evidence. They must not be assigned solely from the vulnerability name.
+
+6. Finding VAPT-001 — SQL Injection
+
+Description
+SQL Injection can occur when an application incorporates untrusted input into a database query without 
+appropriate parameterization. Depending on the affected query and database permissions,
+exploitation may allow unauthorized data access or authentication logic bypass.
+Reproduction procedure
+
+    Open the authorized local Juice Shop instance.
+    Navigate to the affected functionality.
+    Record the exact test conditions and input used.
+    Document the actual application response.
+    Repeat the test safely to confirm reproducibility.
+    Preserve the evidence without exposing credentials or personal data
+
+7. Finding VAPT-002 — Cross-Site Scripting (XSS)
+
+Description
+
+Cross-Site Scripting can occur when untrusted content is interpreted as executable script in a browser. The precise risk depends on the injection context, affected page, browser execution, and privileges of the affected user.
+
+Affected component: [Insert verified endpoint, feature, or rendering context]
+
+Evidence: [Insert XSS-Evidence-01.png and relevant sanitized details]
+
+Reproduction procedure
+
+    Open the authorized local Juice Shop instance.
+    Navigate to the affected feature.
+    Record the test input and the context in which it is processed.
+    Document the actual browser behaviour.
+    Confirm whether script execution occurred and whether it is reproducible.
+    Preserve screenshots and sanitized supporting evidence.
+
